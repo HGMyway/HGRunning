@@ -23,7 +23,6 @@ class CenterViewController: HGBaseViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.view.backgroundColor = UIColor.yellowColor()
         
     }
 
@@ -36,6 +35,10 @@ class CenterViewController: HGBaseViewController {
     // MARK: Button actions
     
     @IBAction func kittiesTapped(sender: AnyObject) {
+     
+        delegate?.toggleLeftPanel?()
+        
+        
     }
     
     @IBAction func puppiesTapped(sender: AnyObject) {

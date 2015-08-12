@@ -8,16 +8,16 @@
 
 import UIKit
 
-//@objc
-//protocol SidePanelViewControllerDelegate {
-//  func animalSelected(animal: Animal)
-//}
+@objc
+protocol SidePanelViewControllerDelegate {
+  func animalSelected(animal: Animal)
+}
 
 class SidePanelViewController: UIViewController {
   
 //  @IBOutlet weak var tableView: UITableView!
   
-//  var animals: Array<Animal>!
+  var animals: Array<Animal>!
 //
 //  struct TableView {
 //    struct CellIdentifiers {
