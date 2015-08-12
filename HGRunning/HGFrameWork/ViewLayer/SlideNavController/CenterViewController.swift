@@ -42,5 +42,6 @@ class CenterViewController: HGBaseViewController {
     }
     
     @IBAction func puppiesTapped(sender: AnyObject) {
+        delegate?.toggleRightPanel?()
     }
 }

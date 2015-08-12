@@ -1,9 +1,28 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="0Fb-Io-x4O">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
     </dependencies>
     <scenes>
+        <!--Content View Controller-->
+        <scene sceneID="HCu-r0-ZTs">
+            <objects>
+                <viewController id="0Fb-Io-x4O" customClass="ContentViewController" customModule="HGRunning" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QLW-Ix-dSk"/>
+                        <viewControllerLayoutGuide type="bottom" id="9Xs-y2-R5y"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zN2-V1-4bx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iKB-TU-ggS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-69.5" y="-998.5"/>
+        </scene>
         <!--Center View Controller-->
         <scene sceneID="nbn-ir-kmh">
             <objects>
@@ -13,33 +32,42 @@
                         <viewControllerLayoutGuide type="bottom" id="AjB-EF-lFv"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="3e6-6f-3T4">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jumping School" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tf3-xh-8ex">
-                                <rect key="frame" x="239" y="433" width="121" height="20"/>
+                                <rect key="frame" x="127" y="433" width="121" height="20"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vlado" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yae-xH-qKQ">
-                                <rect key="frame" x="282" y="461" width="37" height="17"/>
+                                <rect key="frame" x="169" y="461" width="37" height="17"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Images courtesy of FreeDigitalPhotos.net" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OWP-aH-F1j">
-                                <rect key="frame" x="194" y="576" width="213" height="14"/>
+                                <rect key="frame" x="81" y="643" width="213" height="14"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ID-10029135" translatesAutoresizingMaskIntoConstraints="NO" id="mxE-ay-9lw">
-                                <rect key="frame" x="0.0" y="64" width="600" height="350"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="350"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="350" id="J67-7Z-bbJ"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fHd-br-vKT">
+                                <rect key="frame" x="164" y="486" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="dje-P0-9Zg" kind="show" id="Xbo-uS-hbb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -67,6 +95,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="creatorLabel" destination="yae-xH-qKQ" id="FyV-9Z-ecj"/>
                         <outlet property="imageView" destination="mxE-ay-9lw" id="ekX-H9-Idk"/>
@@ -75,7 +104,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gpb-32-ApZ" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="277" y="381"/>
+            <point key="canvasLocation" x="-56" y="-155"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="i9y-0B-P03">
+            <objects>
+                <viewController id="dje-P0-9Zg" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="07H-6G-B0c"/>
+                        <viewControllerLayoutGuide type="bottom" id="FiQ-UZ-plV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6iK-DD-7Nb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T5o-zK-JQu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-56.5" y="639.5"/>
         </scene>
         <!--Left View Controller-->
         <scene sceneID="TWk-Sk-W2B">
@@ -146,8 +193,17 @@
                                                 <constraint firstItem="PGR-2B-HZJ" firstAttribute="leading" secondItem="jhN-cF-Clo" secondAttribute="trailing" constant="8" id="vNO-ZA-WGm"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="animalImageView" destination="jhN-cF-Clo" id="sF8-NZ-JIc"/>
+                                            <outlet property="imageCreatorLabel" destination="X3r-bv-9so" id="dYs-Sb-04P"/>
+                                            <outlet property="imageNameLabel" destination="PGR-2B-HZJ" id="sGH-9s-ite"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="evN-Mv-z1b" id="CwY-kC-PmW"/>
+                                    <outlet property="delegate" destination="evN-Mv-z1b" id="HKs-A3-f79"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -162,7 +218,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XUi-Dl-IrM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-451" y="381"/>
+            <point key="canvasLocation" x="-569.5" y="-998.5"/>
         </scene>
         <!--Right View Controller-->
         <scene sceneID="lCy-7J-ePb">
@@ -233,8 +289,17 @@
                                                 <constraint firstItem="wzt-6x-uqF" firstAttribute="top" secondItem="iF4-rs-Klr" secondAttribute="top" constant="6" id="wFH-cu-Qhv"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="animalImageView" destination="SCK-yJ-YSF" id="Hxd-Hu-e7t"/>
+                                            <outlet property="imageCreatorLabel" destination="9uD-LY-uEj" id="Wir-Aw-Wyk"/>
+                                            <outlet property="imageNameLabel" destination="wzt-6x-uqF" id="caq-hb-Ohh"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="9YK-Ld-CPN" id="KQK-HC-dyf"/>
+                                    <outlet property="delegate" destination="9YK-Ld-CPN" id="38T-aQ-TXr"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -248,7 +313,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Db-RY-ggt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1012" y="381"/>
+            <point key="canvasLocation" x="509" y="-1014"/>
         </scene>
     </scenes>
     <resources>
