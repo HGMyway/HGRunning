@@ -42,7 +42,12 @@ class ContentViewController: HGBaseViewController,CenterViewControllerDelegate
         
     }
     
-    var currentState: SlideOutState = .BothCollapsed
+    var currentState: SlideOutState = .BothCollapsed{
+        didSet{
+            let shouldShowShadow = currentState != .BothCollapsed
+            showShadowForCenterViewController(shouldShowShadow)
+        }
+    }
     var leftViewController: SidePanelViewController?
     
     var centerNavigationController: UINavigationController!
@@ -135,7 +140,18 @@ extension ContentViewController: CenterViewControllerDelegate {
             }, completion: completion)
     }
     
+    
+    
     func animateRightPanel(#shouldExpand: Bool) {
+    }
+    
+    
+    func showShadowForCenterViewController(shouldShowShadow: Bool) {
+        if (shouldShowShadow) {
+            centerNavigationController.view.layer.shadowOpacity = 0.8
+        } else {
+            centerNavigationController.view.layer.shadowOpacity = 0.0
+        }
     }
     
 }
