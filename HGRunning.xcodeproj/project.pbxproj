@@ -18,6 +18,7 @@
 		111F6F201B7B337C00922758 /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111F6F1F1B7B337C00922758 /* ContentViewController.swift */; };
 		111F6F221B7B373300922758 /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111F6F211B7B373300922758 /* Animal.swift */; };
 		111F6F241B7B384300922758 /* SidePanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111F6F231B7B384300922758 /* SidePanelViewController.swift */; };
+		11A791F71B7DF0F200AEC8F2 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A791F61B7DF0F200AEC8F2 /* TestViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		111F6F1F1B7B337C00922758 /* ContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
 		111F6F211B7B373300922758 /* Animal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
 		111F6F231B7B384300922758 /* SidePanelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SidePanelViewController.swift; sourceTree = "<group>"; };
+		11A791F61B7DF0F200AEC8F2 /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -237,6 +239,7 @@
 				111F6F231B7B384300922758 /* SidePanelViewController.swift */,
 				111F6F0D1B7B31D200922758 /* CenterViewController.swift */,
 				111F6F1F1B7B337C00922758 /* ContentViewController.swift */,
+				11A791F61B7DF0F200AEC8F2 /* TestViewController.swift */,
 			);
 			path = SlideNavController;
 			sourceTree = "<group>";
@@ -389,6 +392,7 @@
 			files = (
 				111F6EDE1B7B319A00922758 /* AppDelegate.swift in Sources */,
 				111F6F221B7B373300922758 /* Animal.swift in Sources */,
+				11A791F71B7DF0F200AEC8F2 /* TestViewController.swift in Sources */,
 				111F6F241B7B384300922758 /* SidePanelViewController.swift in Sources */,
 				111F6F171B7B31D200922758 /* HGBaseNavigationController.swift in Sources */,
 				111F6F1C1B7B31D200922758 /* HGBaseViewController.swift in Sources */,

@@ -23,8 +23,18 @@ class CenterViewController: HGBaseViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+//        
+//        testViewController = UIStoryboard.testViewController()
+//    
+//        view.addSubview(testViewController.view)
+//        
+//        addChildViewController(testViewController)
+//        testViewController.didMoveToParentViewController(self)
+//        
         
     }
+    
+    var testViewController:TestViewController!
 
     @IBOutlet weak private var imageView: UIImageView!
     @IBOutlet weak private var titleLabel: UILabel!
@@ -45,3 +55,35 @@ class CenterViewController: HGBaseViewController {
         delegate?.toggleRightPanel?()
     }
 }
+
+
+extension CenterViewController: SidePanelViewControllerDelegate {
+    func animalSelected(animal: Animal) {
+        imageView.image = animal.image
+        titleLabel.text = animal.title
+        creatorLabel.text = animal.creator
+        
+        delegate?.collapseSidePanels?()
+        
+//                testViewController = UIStoryboard.testViewController()
+//        
+//                view.addSubview(testViewController.view)
+//        
+//                addChildViewController(testViewController)
+//                testViewController.didMoveToParentViewController(self)
+        
+    }
+}
+
+
+
+private extension UIStoryboard {
+    class func mainStoryboard() -> UIStoryboard { return UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()) }
+    
+    
+    class func testViewController() -> TestViewController? {
+        return mainStoryboard().instantiateViewControllerWithIdentifier("TestViewController") as? TestViewController
+    }
+
+}
+

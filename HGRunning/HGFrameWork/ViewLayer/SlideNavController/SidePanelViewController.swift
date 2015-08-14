@@ -17,6 +17,10 @@ class SidePanelViewController: UIViewController {
   
 //  @IBOutlet weak var tableView: UITableView!
   
+    
+    
+    var delegete :SidePanelViewControllerDelegate?
+    
   var animals: Array<Animal>!
 
   struct TableView {
@@ -57,6 +61,10 @@ extension SidePanelViewController: UITableViewDataSource {
 extension SidePanelViewController: UITableViewDelegate {
 
   func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    
+     let selectedAnimal = animals[indexPath.row]
+    delegete?.animalSelected(selectedAnimal)
+    
   }
 
 }
