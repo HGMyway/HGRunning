@@ -18,7 +18,8 @@
 		111F6F201B7B337C00922758 /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111F6F1F1B7B337C00922758 /* ContentViewController.swift */; };
 		111F6F221B7B373300922758 /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111F6F211B7B373300922758 /* Animal.swift */; };
 		111F6F241B7B384300922758 /* SidePanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111F6F231B7B384300922758 /* SidePanelViewController.swift */; };
-		11A791F71B7DF0F200AEC8F2 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A791F61B7DF0F200AEC8F2 /* TestViewController.swift */; };
+		1143D6CE1B7E2CDF004FBA6E /* HGHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1143D6CB1B7E2CDF004FBA6E /* HGHomeViewController.swift */; };
+		1143D6D21B7E318D004FBA6E /* HGMineCenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1143D6D11B7E318D004FBA6E /* HGMineCenterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,7 +48,8 @@
 		111F6F1F1B7B337C00922758 /* ContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
 		111F6F211B7B373300922758 /* Animal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
 		111F6F231B7B384300922758 /* SidePanelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SidePanelViewController.swift; sourceTree = "<group>"; };
-		11A791F61B7DF0F200AEC8F2 /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		1143D6CB1B7E2CDF004FBA6E /* HGHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HGHomeViewController.swift; sourceTree = "<group>"; };
+		1143D6D11B7E318D004FBA6E /* HGMineCenterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HGMineCenterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,7 +91,7 @@
 		111F6EDA1B7B319A00922758 /* HGRunning */ = {
 			isa = PBXGroup;
 			children = (
-				111F6F131B7B31D200922758 /* HGSUV */,
+				1143D6C81B7E2CDF004FBA6E /* HGSUV */,
 				111F6EFD1B7B31D200922758 /* HGFrameWork */,
 				111F6EDB1B7B319A00922758 /* Supporting Files */,
 			);
@@ -239,7 +241,6 @@
 				111F6F231B7B384300922758 /* SidePanelViewController.swift */,
 				111F6F0D1B7B31D200922758 /* CenterViewController.swift */,
 				111F6F1F1B7B337C00922758 /* ContentViewController.swift */,
-				11A791F61B7DF0F200AEC8F2 /* TestViewController.swift */,
 			);
 			path = SlideNavController;
 			sourceTree = "<group>";
@@ -259,31 +260,41 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
-		111F6F131B7B31D200922758 /* HGSUV */ = {
+		1143D6C81B7E2CDF004FBA6E /* HGSUV */ = {
 			isa = PBXGroup;
 			children = (
-				111F6F141B7B31D200922758 /* HGtools */,
-				111F6F151B7B31D200922758 /* MineCenter */,
-				111F6F161B7B31D200922758 /* Sport */,
+				1143D6C91B7E2CDF004FBA6E /* HGtools */,
+				1143D6CA1B7E2CDF004FBA6E /* Home */,
+				1143D6CC1B7E2CDF004FBA6E /* MineCenter */,
+				1143D6CD1B7E2CDF004FBA6E /* Sport */,
 			);
 			path = HGSUV;
 			sourceTree = "<group>";
 		};
-		111F6F141B7B31D200922758 /* HGtools */ = {
+		1143D6C91B7E2CDF004FBA6E /* HGtools */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = HGtools;
 			sourceTree = "<group>";
 		};
-		111F6F151B7B31D200922758 /* MineCenter */ = {
+		1143D6CA1B7E2CDF004FBA6E /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				1143D6CB1B7E2CDF004FBA6E /* HGHomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		1143D6CC1B7E2CDF004FBA6E /* MineCenter */ = {
+			isa = PBXGroup;
+			children = (
+				1143D6D11B7E318D004FBA6E /* HGMineCenterViewController.swift */,
 			);
 			path = MineCenter;
 			sourceTree = "<group>";
 		};
-		111F6F161B7B31D200922758 /* Sport */ = {
+		1143D6CD1B7E2CDF004FBA6E /* Sport */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -392,9 +403,10 @@
 			files = (
 				111F6EDE1B7B319A00922758 /* AppDelegate.swift in Sources */,
 				111F6F221B7B373300922758 /* Animal.swift in Sources */,
-				11A791F71B7DF0F200AEC8F2 /* TestViewController.swift in Sources */,
 				111F6F241B7B384300922758 /* SidePanelViewController.swift in Sources */,
 				111F6F171B7B31D200922758 /* HGBaseNavigationController.swift in Sources */,
+				1143D6CE1B7E2CDF004FBA6E /* HGHomeViewController.swift in Sources */,
+				1143D6D21B7E318D004FBA6E /* HGMineCenterViewController.swift in Sources */,
 				111F6F1C1B7B31D200922758 /* HGBaseViewController.swift in Sources */,
 				111F6F191B7B31D200922758 /* CenterViewController.swift in Sources */,
 				111F6F201B7B337C00922758 /* ContentViewController.swift in Sources */,

@@ -16,7 +16,7 @@ enum SlideOutState {
     case RightPanelExpanded
 }
 
-class ContentViewController: HGBaseViewController,CenterViewControllerDelegate
+class ContentViewController: HGBaseViewController
 {
 
 
@@ -36,8 +36,8 @@ class ContentViewController: HGBaseViewController,CenterViewControllerDelegate
         
         centerNavigationController.didMoveToParentViewController(self)
         
-        let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: "handlePanGesture:")
-        centerNavigationController.view.addGestureRecognizer(panGestureRecognizer)
+//        let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: "handlePanGesture:")
+//        centerNavigationController.view.addGestureRecognizer(panGestureRecognizer)
 
      
         
@@ -128,16 +128,16 @@ extension ContentViewController: CenterViewControllerDelegate {
     func collapseSidePanels() {
         switch (currentState) {
         case .RightPanelExpanded:
-            toggleRightPanel()
+            rightSlideBtnClick()
         case .LeftPanelExpanded:
-            toggleLeftPanel()
+            leftSlideBtnClick()
         default:
             break
         }
     }
     
     
-    func toggleLeftPanel() {
+    func leftSlideBtnClick() {
         let notAlreadyExpanded = (currentState != .LeftPanelExpanded)
         if notAlreadyExpanded{
             addLeftPanelViewController()
@@ -146,7 +146,7 @@ extension ContentViewController: CenterViewControllerDelegate {
         
     }
     
-    func toggleRightPanel() {
+    func rightSlideBtnClick() {
         let notAlreadyExpanded = (currentState != .RightPanelExpanded)
         
         if notAlreadyExpanded {

@@ -11,79 +11,113 @@ import UIKit
 
 @objc
 protocol CenterViewControllerDelegate {
-    optional func toggleLeftPanel()
-    optional func toggleRightPanel()
+    optional func leftSlideBtnClick()
+    optional func rightSlideBtnClick()
     optional func collapseSidePanels()
 }
 
 
-class CenterViewController: HGBaseViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-//        
-//        testViewController = UIStoryboard.testViewController()
-//    
-//        view.addSubview(testViewController.view)
-//        
-//        addChildViewController(testViewController)
-//        testViewController.didMoveToParentViewController(self)
-//        
-        
-    }
+class CenterViewController: HGBaseViewController
+{
     
-    var testViewController:TestViewController!
-
-    @IBOutlet weak private var imageView: UIImageView!
-    @IBOutlet weak private var titleLabel: UILabel!
-    @IBOutlet weak private var creatorLabel: UILabel!
     
     var delegate: CenterViewControllerDelegate?
     
-    // MARK: Button actions
     
-    @IBAction func kittiesTapped(sender: AnyObject) {
-     
-        delegate?.toggleLeftPanel?()
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
-        
+        addHomeViewController()
     }
     
-    @IBAction func puppiesTapped(sender: AnyObject) {
-        delegate?.toggleRightPanel?()
+    
+    
+    var currentChildVC:UIViewController?
+    
+    //MARK: childVC
+    var homeViewController:HGHomeViewController!
+    var mineCenterViewController:HGMineCenterViewController!{
+        get{
+            return UIStoryboard.mineCenterViewController()
+        }
     }
+    
+    
+    private func addHomeViewController(){
+        homeViewController = UIStoryboard.homeViewController()
+        view.addSubview(homeViewController.view)
+        addChildViewController(homeViewController)
+        homeViewController.didMoveToParentViewController(self)
+        currentChildVC = homeViewController
+    }
+    
+    private func replaceController(newVc:UIViewController){
+        if currentChildVC != newVc{
+            addChildViewController(newVc)
+            transitionFromViewController(currentChildVC!, toViewController: newVc, duration: 1.0, options: UIViewAnimationOptions.TransitionNone, animations: nil, completion: {(finished) -> Void in
+                self.currentChildVC!.removeFromParentViewController()
+                newVc.didMoveToParentViewController(self)
+                self.currentChildVC = newVc
+                
+            })
+        }
+    }
+    
+    
+    // MARK: rootvc中左右导航栏按钮
+    @IBAction func leftSlideBtnClick(sender: AnyObject) {
+        delegate?.leftSlideBtnClick?()
+    }
+    
+    //    @IBAction func rightSlideBtnClick(sender: AnyObject) {
+    //        delegate?.rightSlideBtnClick?()
+    //    }
 }
 
 
+
+
+// MARK: rootvc中左右导航栏按钮事件
 extension CenterViewController: SidePanelViewControllerDelegate {
-    func animalSelected(animal: Animal) {
-        imageView.image = animal.image
-        titleLabel.text = animal.title
-        creatorLabel.text = animal.creator
-        
+    
+    func panelCellClick() {
         delegate?.collapseSidePanels?()
         
-//                testViewController = UIStoryboard.testViewController()
-//        
-//                view.addSubview(testViewController.view)
-//        
-//                addChildViewController(testViewController)
-//                testViewController.didMoveToParentViewController(self)
+        replaceController(mineCenterViewController)
         
     }
+    
+    //    func animalSelected(animal: Animal) {
+    //        imageView.image = animal.image
+    //        titleLabel.text = animal.title
+    //        creatorLabel.text = animal.creator
+    //
+    //        delegate?.collapseSidePanels?()
+    //
+    ////                testViewController = UIStoryboard.testViewController()
+    ////
+    ////                view.addSubview(testViewController.view)
+    ////
+    ////                addChildViewController(testViewController)
+    ////                testViewController.didMoveToParentViewController(self)
+    //
+    //    }
 }
 
 
 
+//MARK: 获取SB中rootvc
 private extension UIStoryboard {
     class func mainStoryboard() -> UIStoryboard { return UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()) }
     
     
-    class func testViewController() -> TestViewController? {
-        return mainStoryboard().instantiateViewControllerWithIdentifier("TestViewController") as? TestViewController
+    class func homeViewController() -> HGHomeViewController? {
+        return mainStoryboard().instantiateViewControllerWithIdentifier("HGHomeViewController") as? HGHomeViewController
     }
-
+    
+    class func mineCenterViewController() -> HGMineCenterViewController? {
+        return mainStoryboard().instantiateViewControllerWithIdentifier("HGMineCenterViewController") as? HGMineCenterViewController
+    }
+    
 }
 

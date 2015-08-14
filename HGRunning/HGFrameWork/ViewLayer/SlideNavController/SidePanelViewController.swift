@@ -10,7 +10,10 @@ import UIKit
 
 @objc
 protocol SidePanelViewControllerDelegate {
-  func animalSelected(animal: Animal)
+//  func animalSelected(animal: Animal)
+    
+    func panelCellClick()
+    
 }
 
 class SidePanelViewController: UIViewController {
@@ -62,8 +65,10 @@ extension SidePanelViewController: UITableViewDelegate {
 
   func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
     
-     let selectedAnimal = animals[indexPath.row]
-    delegete?.animalSelected(selectedAnimal)
+//     let selectedAnimal = animals[indexPath.row]
+//    delegete?.animalSelected(selectedAnimal)
+    
+    delegete?.panelCellClick()
     
   }
 
