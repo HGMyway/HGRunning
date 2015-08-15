@@ -25,6 +25,7 @@ class HGSidePanelViewController: HGBaseViewController {
     struct TableView {
         struct CellIdentifiers {
             static let AnimalCell = "HGAnimalCell"
+            static let  HGSidePanlCellTableViewCell = "HGSidePanlCellTableViewCell"
         }
     }
 
@@ -47,9 +48,11 @@ extension HGSidePanelViewController: UITableViewDataSource {
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCellWithIdentifier(TableView.CellIdentifiers.AnimalCell, forIndexPath: indexPath) as! HGAnimalCell
+//        let cell = tableView.dequeueReusableCellWithIdentifier(TableView.CellIdentifiers.AnimalCell, forIndexPath: indexPath) as! HGAnimalCell
+//        cell.configureForAnimal(animals[indexPath.row])
+        let cell = tableView.dequeueReusableCellWithIdentifier(TableView.CellIdentifiers.HGSidePanlCellTableViewCell) as! HGSidePanlCellTableViewCell
         
-        cell.configureForAnimal(animals[indexPath.row])
+//        cell.configureForAnimal(<#cellModel: HGSideCellModel#>)
         return cell
     }
     
@@ -69,11 +72,18 @@ extension HGSidePanelViewController: UITableViewDelegate {
     
 }
 
+
+
+
+
 class HGAnimalCell: UITableViewCell {
     
     @IBOutlet weak var animalImageView: UIImageView!
     @IBOutlet weak var imageNameLabel: UILabel!
     @IBOutlet weak var imageCreatorLabel: UILabel!
+    
+    
+    
     
     func configureForAnimal(animal: Animal) {
         animalImageView.image = animal.image
@@ -82,3 +92,5 @@ class HGAnimalCell: UITableViewCell {
     }
     
 }
+
+
