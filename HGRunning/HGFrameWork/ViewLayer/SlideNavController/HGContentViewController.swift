@@ -1,29 +1,29 @@
 //
-//  ContentViewController.swift
+//  HGContentViewController.swift
 //  HGRunning
 //
-//  Created by 任是无情也动人 on 15/8/12.
+//  Created by 任是无情也动人 on 15/8/15.
 //  Copyright (c) 2015年 ismyway. All rights reserved.
 //
 
 import UIKit
 
-//import QuartzCore
 
-enum SlideOutState {
+
+enum HGSlideOutState {
     case BothCollapsed
     case LeftPanelExpanded
     case RightPanelExpanded
 }
 
-class ContentViewController: HGBaseViewController
-{
 
-
+class HGContentViewController: HGBaseViewController{
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         
         centerViewController = UIStoryboard.centerViewController()
@@ -36,32 +36,32 @@ class ContentViewController: HGBaseViewController
         
         centerNavigationController.didMoveToParentViewController(self)
         
-//        let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: "handlePanGesture:")
-//        centerNavigationController.view.addGestureRecognizer(panGestureRecognizer)
-
-     
+        //        let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: "handlePanGesture:")
+        //        centerNavigationController.view.addGestureRecognizer(panGestureRecognizer)
+        
+        
         
         
     }
     
-    var currentState: SlideOutState = .BothCollapsed{
+    var currentState: HGSlideOutState = .BothCollapsed{
         didSet{
             let shouldShowShadow = currentState != .BothCollapsed
             showShadowForCenterViewController(shouldShowShadow)
         }
     }
-    var leftViewController: SidePanelViewController?
+    var leftViewController: HGSidePanelViewController?
     
     var centerNavigationController: UINavigationController!
-    var centerViewController: CenterViewController!
+    var centerViewController: HGMainCenterViewController!
     
     let centerPanelExpandedOffset: CGFloat = 60
     
     
     
-    var rightViewController: SidePanelViewController?
+    var rightViewController: HGSidePanelViewController?
     
-   
+    
 }
 
 
@@ -69,23 +69,23 @@ class ContentViewController: HGBaseViewController
 private extension UIStoryboard {
     class func mainStoryboard() -> UIStoryboard { return UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()) }
     
-    class func leftViewController() -> SidePanelViewController? {
-        return mainStoryboard().instantiateViewControllerWithIdentifier("LeftViewController") as? SidePanelViewController
+    class func leftViewController() -> HGSidePanelViewController? {
+        return mainStoryboard().instantiateViewControllerWithIdentifier("LeftViewController") as? HGSidePanelViewController
     }
     
-    class func rightViewController() -> SidePanelViewController? {
-        return mainStoryboard().instantiateViewControllerWithIdentifier("RightViewController") as? SidePanelViewController
+    class func rightViewController() -> HGSidePanelViewController? {
+        return mainStoryboard().instantiateViewControllerWithIdentifier("RightViewController") as? HGSidePanelViewController
     }
     
-    class func centerViewController() -> CenterViewController? {
-        return mainStoryboard().instantiateViewControllerWithIdentifier("CenterViewController") as? CenterViewController
+    class func centerViewController() -> HGMainCenterViewController? {
+        return mainStoryboard().instantiateViewControllerWithIdentifier("HGMainCenterViewController") as? HGMainCenterViewController
     }
     
 }
 
 
 //MARK: 手势
-extension ContentViewController: UIGestureRecognizerDelegate {
+extension HGContentViewController: UIGestureRecognizerDelegate {
     // MARK: Gesture recognizer
     
     func handlePanGesture(recognizer: UIPanGestureRecognizer) {
@@ -123,7 +123,7 @@ extension ContentViewController: UIGestureRecognizerDelegate {
 
 
 // MARK: CenterViewController delegate
-extension ContentViewController: CenterViewControllerDelegate {
+extension HGContentViewController: HGMainCenterViewControllerDelegate {
     
     func collapseSidePanels() {
         switch (currentState) {
@@ -168,10 +168,10 @@ extension ContentViewController: CenterViewControllerDelegate {
         }
     }
     
-
     
     
-   
+    
+    
     
     func animateLeftPanel(#shouldExpand: Bool) {
         
@@ -187,8 +187,8 @@ extension ContentViewController: CenterViewControllerDelegate {
                 self.leftViewController = nil;
             }
         }
-
-
+        
+        
     }
     
     
@@ -219,7 +219,7 @@ extension ContentViewController: CenterViewControllerDelegate {
     }
     
     
-    func addChildSidePanelController(sidePanelController: SidePanelViewController) {
+    func addChildSidePanelController(sidePanelController: HGSidePanelViewController) {
         sidePanelController.delegete = centerViewController
         
         view.insertSubview(sidePanelController.view, atIndex: 0)
@@ -234,7 +234,7 @@ extension ContentViewController: CenterViewControllerDelegate {
             }, completion: completion)
     }
     
-
+    
     
     
     func showShadowForCenterViewController(shouldShowShadow: Bool) {

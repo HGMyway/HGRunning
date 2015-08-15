@@ -1,27 +1,24 @@
 //
-//  CenterViewController.swift
+//  HGMainCenterViewController.swift
 //  HGRunning
 //
-//  Created by 任是无情也动人 on 15/8/12.
+//  Created by 任是无情也动人 on 15/8/15.
 //  Copyright (c) 2015年 ismyway. All rights reserved.
 //
 
 import UIKit
 
-
 @objc
-protocol CenterViewControllerDelegate {
+protocol HGMainCenterViewControllerDelegate {
     optional func leftSlideBtnClick()
     optional func rightSlideBtnClick()
     optional func collapseSidePanels()
 }
 
-
-class CenterViewController: HGBaseViewController
-{
+class HGMainCenterViewController: HGBaseViewController{
     
     
-    var delegate: CenterViewControllerDelegate?
+    var delegate: HGMainCenterViewControllerDelegate?
     
     
     override func viewDidLoad() {
@@ -61,6 +58,7 @@ class CenterViewController: HGBaseViewController
                 
             })
         }
+        
     }
     
     
@@ -77,8 +75,10 @@ class CenterViewController: HGBaseViewController
 
 
 
+
+
 // MARK: rootvc中左右导航栏按钮事件
-extension CenterViewController: SidePanelViewControllerDelegate {
+extension HGMainCenterViewController: HGSidePanelViewControllerDelegate {
     
     func panelCellClick() {
         delegate?.collapseSidePanels?()

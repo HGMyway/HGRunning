@@ -9,7 +9,7 @@
         <!--Content View Controller-->
         <scene sceneID="HCu-r0-ZTs">
             <objects>
-                <viewController id="0Fb-Io-x4O" customClass="ContentViewController" customModule="HGRunning" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="0Fb-Io-x4O" customClass="HGContentViewController" customModule="HGRunning" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QLW-Ix-dSk"/>
                         <viewControllerLayoutGuide type="bottom" id="9Xs-y2-R5y"/>
@@ -28,7 +28,7 @@
         <!--Center View Controller-->
         <scene sceneID="nbn-ir-kmh">
             <objects>
-                <viewController storyboardIdentifier="CenterViewController" title="Center View Controller" id="Onr-OW-OLw" customClass="CenterViewController" customModule="HGRunning" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HGMainCenterViewController" title="Center View Controller" id="Onr-OW-OLw" customClass="HGMainCenterViewController" customModule="HGRunning" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Tcu-lU-QjE"/>
                         <viewControllerLayoutGuide type="bottom" id="AjB-EF-lFv"/>
@@ -189,7 +189,7 @@
         <!--Left View Controller-->
         <scene sceneID="TWk-Sk-W2B">
             <objects>
-                <viewController storyboardIdentifier="LeftViewController" title="Left View Controller" id="evN-Mv-z1b" customClass="SidePanelViewController" customModule="HGRunning" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LeftViewController" title="Left View Controller" id="evN-Mv-z1b" customClass="HGSidePanelViewController" customModule="HGRunning" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zzi-cJ-8fB"/>
                         <viewControllerLayoutGuide type="bottom" id="xtK-QD-KZ6"/>
@@ -221,7 +221,7 @@
                                     </constraints>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AnimalCell" id="S5B-Gb-Kee" customClass="AnimalCell" customModule="HGRunning" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="HGAnimalCell" id="S5B-Gb-Kee" customClass="HGAnimalCell" customModule="HGRunning" customModuleProvider="target">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="S5B-Gb-Kee" id="hmt-En-FOz">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -256,7 +256,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="animalImageView" destination="jhN-cF-Clo" id="sF8-NZ-JIc"/>
+                                            <outlet property="animalImageView" destination="jhN-cF-Clo" id="8TZ-5f-8fr"/>
                                             <outlet property="imageCreatorLabel" destination="X3r-bv-9so" id="dYs-Sb-04P"/>
                                             <outlet property="imageNameLabel" destination="PGR-2B-HZJ" id="sGH-9s-ite"/>
                                         </connections>
@@ -285,7 +285,7 @@
         <!--Right View Controller-->
         <scene sceneID="lCy-7J-ePb">
             <objects>
-                <viewController storyboardIdentifier="RightViewController" title="Right View Controller" id="9YK-Ld-CPN" customClass="SidePanelViewController" customModule="HGRunning" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RightViewController" title="Right View Controller" id="9YK-Ld-CPN" customClass="HGSidePanelViewController" customModule="HGRunning" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Exb-la-rUT"/>
                         <viewControllerLayoutGuide type="bottom" id="sjd-qS-Uai"/>

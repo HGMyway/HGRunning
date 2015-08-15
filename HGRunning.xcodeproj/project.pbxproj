@@ -13,13 +13,13 @@
 		111F6EE81B7B319A00922758 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 111F6EE61B7B319A00922758 /* LaunchScreen.xib */; };
 		111F6EF41B7B319A00922758 /* HGRunningTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111F6EF31B7B319A00922758 /* HGRunningTests.swift */; };
 		111F6F171B7B31D200922758 /* HGBaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111F6F0A1B7B31D200922758 /* HGBaseNavigationController.swift */; };
-		111F6F191B7B31D200922758 /* CenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111F6F0D1B7B31D200922758 /* CenterViewController.swift */; };
 		111F6F1C1B7B31D200922758 /* HGBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111F6F121B7B31D200922758 /* HGBaseViewController.swift */; };
-		111F6F201B7B337C00922758 /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111F6F1F1B7B337C00922758 /* ContentViewController.swift */; };
 		111F6F221B7B373300922758 /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111F6F211B7B373300922758 /* Animal.swift */; };
-		111F6F241B7B384300922758 /* SidePanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111F6F231B7B384300922758 /* SidePanelViewController.swift */; };
 		1143D6CE1B7E2CDF004FBA6E /* HGHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1143D6CB1B7E2CDF004FBA6E /* HGHomeViewController.swift */; };
 		1143D6D21B7E318D004FBA6E /* HGMineCenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1143D6D11B7E318D004FBA6E /* HGMineCenterViewController.swift */; };
+		1180144B1B7EC5A100E0DCD7 /* HGContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1180144A1B7EC5A100E0DCD7 /* HGContentViewController.swift */; };
+		1180144D1B7EC5E000E0DCD7 /* HGSidePanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1180144C1B7EC5E000E0DCD7 /* HGSidePanelViewController.swift */; };
+		118014511B7EC64A00E0DCD7 /* HGMainCenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118014501B7EC64A00E0DCD7 /* HGMainCenterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,13 +43,13 @@
 		111F6EF21B7B319A00922758 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		111F6EF31B7B319A00922758 /* HGRunningTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HGRunningTests.swift; sourceTree = "<group>"; };
 		111F6F0A1B7B31D200922758 /* HGBaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HGBaseNavigationController.swift; sourceTree = "<group>"; };
-		111F6F0D1B7B31D200922758 /* CenterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenterViewController.swift; sourceTree = "<group>"; };
 		111F6F121B7B31D200922758 /* HGBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HGBaseViewController.swift; sourceTree = "<group>"; };
-		111F6F1F1B7B337C00922758 /* ContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
 		111F6F211B7B373300922758 /* Animal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
-		111F6F231B7B384300922758 /* SidePanelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SidePanelViewController.swift; sourceTree = "<group>"; };
 		1143D6CB1B7E2CDF004FBA6E /* HGHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HGHomeViewController.swift; sourceTree = "<group>"; };
 		1143D6D11B7E318D004FBA6E /* HGMineCenterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HGMineCenterViewController.swift; sourceTree = "<group>"; };
+		1180144A1B7EC5A100E0DCD7 /* HGContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HGContentViewController.swift; sourceTree = "<group>"; };
+		1180144C1B7EC5E000E0DCD7 /* HGSidePanelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HGSidePanelViewController.swift; sourceTree = "<group>"; };
+		118014501B7EC64A00E0DCD7 /* HGMainCenterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HGMainCenterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -238,9 +238,9 @@
 			isa = PBXGroup;
 			children = (
 				111F6F211B7B373300922758 /* Animal.swift */,
-				111F6F231B7B384300922758 /* SidePanelViewController.swift */,
-				111F6F0D1B7B31D200922758 /* CenterViewController.swift */,
-				111F6F1F1B7B337C00922758 /* ContentViewController.swift */,
+				1180144A1B7EC5A100E0DCD7 /* HGContentViewController.swift */,
+				118014501B7EC64A00E0DCD7 /* HGMainCenterViewController.swift */,
+				1180144C1B7EC5E000E0DCD7 /* HGSidePanelViewController.swift */,
 			);
 			path = SlideNavController;
 			sourceTree = "<group>";
@@ -403,13 +403,13 @@
 			files = (
 				111F6EDE1B7B319A00922758 /* AppDelegate.swift in Sources */,
 				111F6F221B7B373300922758 /* Animal.swift in Sources */,
-				111F6F241B7B384300922758 /* SidePanelViewController.swift in Sources */,
+				118014511B7EC64A00E0DCD7 /* HGMainCenterViewController.swift in Sources */,
 				111F6F171B7B31D200922758 /* HGBaseNavigationController.swift in Sources */,
 				1143D6CE1B7E2CDF004FBA6E /* HGHomeViewController.swift in Sources */,
 				1143D6D21B7E318D004FBA6E /* HGMineCenterViewController.swift in Sources */,
 				111F6F1C1B7B31D200922758 /* HGBaseViewController.swift in Sources */,
-				111F6F191B7B31D200922758 /* CenterViewController.swift in Sources */,
-				111F6F201B7B337C00922758 /* ContentViewController.swift in Sources */,
+				1180144D1B7EC5E000E0DCD7 /* HGSidePanelViewController.swift in Sources */,
+				1180144B1B7EC5A100E0DCD7 /* HGContentViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
