@@ -80,10 +80,25 @@ class HGMainCenterViewController: HGBaseViewController{
 // MARK: rootvc中左右导航栏按钮事件
 extension HGMainCenterViewController: HGSidePanelViewControllerDelegate {
     
-    func panelCellClick() {
+    func panelCellClick(selectedModel : HGSideCellModel) {
         delegate?.collapseSidePanels?()
         
-        replaceController(mineCenterViewController)
+        
+        
+        switch selectedModel.DNAstr {
+        case "HGMainCenterViewController":
+            replaceController(mineCenterViewController)
+                   break
+        case "HGHomeViewController":
+            replaceController(homeViewController)
+            break
+
+        default :
+            break
+        }
+        
+        
+
         
     }
     

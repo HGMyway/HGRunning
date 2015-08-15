@@ -21,11 +21,13 @@ class HGSidePanlCellTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    @IBOutlet weak var titleLabel: UILabel!
+//    @IBOutlet weak var titleLabel: UILabel!
     
     func  configureForSidePannalCell(cellModel:HGSideCellModel){
         
-    titleLabel.text = cellModel.title
+        self.imageView?.image = cellModel.image
+        self.textLabel?.text = cellModel.title
+        
         
     
         

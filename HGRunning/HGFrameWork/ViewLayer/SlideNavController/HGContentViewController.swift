@@ -160,7 +160,7 @@ extension HGContentViewController: HGMainCenterViewControllerDelegate {
     func addLeftPanelViewController() {
         if(leftViewController == nil){
             leftViewController = UIStoryboard.leftViewController()
-            leftViewController!.animals = Animal.allCats()
+            leftViewController!.sideCellList = HGSideCellModel.allCellData()
             
             addChildSidePanelController(leftViewController!)
             
@@ -196,7 +196,7 @@ extension HGContentViewController: HGMainCenterViewControllerDelegate {
     func addRightPanelViewController() {
         if (rightViewController == nil) {
             rightViewController = UIStoryboard.rightViewController()
-            rightViewController!.animals = Animal.allDogs()
+            rightViewController!.sideCellList = HGSideCellModel.allCellData()
             
             addChildSidePanelController(rightViewController!)
         }

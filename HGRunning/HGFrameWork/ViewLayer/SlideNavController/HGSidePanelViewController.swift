@@ -12,7 +12,7 @@ import UIKit
 protocol HGSidePanelViewControllerDelegate {
     //  func animalSelected(animal: Animal)
     
-    func panelCellClick()
+    func panelCellClick(selectedModel : HGSideCellModel)
     
 }
 
@@ -20,7 +20,7 @@ class HGSidePanelViewController: HGBaseViewController {
     
     var delegete :HGSidePanelViewControllerDelegate?
     
-    var animals: Array<Animal>!
+    var sideCellList: Array<HGSideCellModel>!
     
     struct TableView {
         struct CellIdentifiers {
@@ -43,7 +43,7 @@ extension HGSidePanelViewController: UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return animals.count
+        return sideCellList.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -52,7 +52,8 @@ extension HGSidePanelViewController: UITableViewDataSource {
 //        cell.configureForAnimal(animals[indexPath.row])
         let cell = tableView.dequeueReusableCellWithIdentifier(TableView.CellIdentifiers.HGSidePanlCellTableViewCell) as! HGSidePanlCellTableViewCell
         
-//        cell.configureForAnimal(<#cellModel: HGSideCellModel#>)
+        cell.configureForSidePannalCell(sideCellList[indexPath.row])
+        
         return cell
     }
     
@@ -66,7 +67,9 @@ extension HGSidePanelViewController: UITableViewDelegate {
         //     let selectedAnimal = animals[indexPath.row]
         //    delegete?.animalSelected(selectedAnimal)
         
-        delegete?.panelCellClick()
+        let selectedModel  =  sideCellList[indexPath.row]
+        delegete?.panelCellClick(selectedModel)
+        
         
     }
     
@@ -76,21 +79,21 @@ extension HGSidePanelViewController: UITableViewDelegate {
 
 
 
-class HGAnimalCell: UITableViewCell {
-    
-    @IBOutlet weak var animalImageView: UIImageView!
-    @IBOutlet weak var imageNameLabel: UILabel!
-    @IBOutlet weak var imageCreatorLabel: UILabel!
-    
-    
-    
-    
-    func configureForAnimal(animal: Animal) {
-        animalImageView.image = animal.image
-        imageNameLabel.text = animal.title
-        imageCreatorLabel.text = animal.creator
-    }
-    
-}
+//class HGAnimalCell: UITableViewCell {
+//    
+//    @IBOutlet weak var animalImageView: UIImageView!
+//    @IBOutlet weak var imageNameLabel: UILabel!
+//    @IBOutlet weak var imageCreatorLabel: UILabel!
+//    
+//    
+//    
+//    
+//    func configureForAnimal(animal: Animal) {
+//        animalImageView.image = animal.image
+//        imageNameLabel.text = animal.title
+//        imageCreatorLabel.text = animal.creator
+//    }
+//    
+//}
 
 
