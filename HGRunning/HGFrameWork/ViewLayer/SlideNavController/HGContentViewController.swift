@@ -109,7 +109,7 @@ extension HGContentViewController: UIGestureRecognizerDelegate {
             if (leftViewController != nil) {
                 // animate the side panel open or closed based on whether the view has moved more or less than halfway
                 let hasMovedGreaterThanHalfway = recognizer.view!.center.x > view.bounds.size.width
-                animateLeftPanel(shouldExpand: hasMovedGreaterThanHalfway)
+                leftSidePanel(shouldExpand: hasMovedGreaterThanHalfway)
             } else if (rightViewController != nil) {
                 let hasMovedGreaterThanHalfway = recognizer.view!.center.x < 0
                 animateRightPanel(shouldExpand: hasMovedGreaterThanHalfway)
@@ -142,7 +142,7 @@ extension HGContentViewController: HGMainCenterViewControllerDelegate {
         if notAlreadyExpanded{
             addLeftPanelViewController()
         }
-        animateLeftPanel(shouldExpand: notAlreadyExpanded)
+        leftSidePanel(shouldExpand: notAlreadyExpanded)
         
     }
     
@@ -173,7 +173,7 @@ extension HGContentViewController: HGMainCenterViewControllerDelegate {
     
     
     
-    func animateLeftPanel(#shouldExpand: Bool) {
+    func leftSidePanel(#shouldExpand: Bool) {
         
         if (shouldExpand) {
             currentState = .LeftPanelExpanded
@@ -183,7 +183,7 @@ extension HGContentViewController: HGMainCenterViewControllerDelegate {
             animateCenterPanelXPosition(targetPosition: 0) { finished in
                 self.currentState = .BothCollapsed
                 
-                self.leftViewController!.view.removeFromSuperview()
+                self.leftViewController?.view.removeFromSuperview()
                 self.leftViewController = nil;
             }
         }
@@ -212,7 +212,7 @@ extension HGContentViewController: HGMainCenterViewControllerDelegate {
             animateCenterPanelXPosition(targetPosition: 0) { _ in
                 self.currentState = .BothCollapsed
                 
-                self.rightViewController!.view.removeFromSuperview()
+                self.rightViewController?.view.removeFromSuperview()
                 self.rightViewController = nil;
             }
         }
